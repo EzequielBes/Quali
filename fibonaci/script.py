@@ -11,7 +11,7 @@ def fibonacci_recursivo(n):
         sequencia.append(numero)
     return sequencia
 
-n = 100
+n = 10
 resultado = fibonacci_recursivo(n)
 print(resultado)
 
