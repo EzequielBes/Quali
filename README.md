@@ -1,5 +1,5 @@
 # *Codigo Feito em Python para teste Qualiconsig*
-[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=00bfbf&size=35&center=true&vCenter=true&width=1000&lines=Ola👋🏻,+Esse+É+Meu+Codigo+Para+Vaga+;De+dev+Python;)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.herokuapp.com/?color=00bfbf&size=35&center=true&vCenter=true&width=1000&lines=👋🏻,+Esse+É+Meu+Codigo+Para+Vaga+;De+dev+Python;)](https://git.io/typing-svg)
 
 
 - [x] Criado codigo Robo
