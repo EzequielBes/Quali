@@ -1,6 +1,2 @@
-### Codigo Feito em Python 
+# *Codigo Feito em Python para teste Qualiconsig* #fffff
 
-
-## Robo de automação -- 
-
-## Fibonacci -- 
