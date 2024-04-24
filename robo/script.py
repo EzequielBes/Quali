@@ -22,15 +22,7 @@ def get_filmes():
         lista_dez_filmes = WebDriverWait(navegador, 10).until(EC.presence_of_all_elements_located((By.XPATH, '//*[@id="mw-content-text"]/div[1]/ul[1]/li')))
         lista_outros_filmes = WebDriverWait(navegador, 10).until(EC.presence_of_all_elements_located((By.XPATH, '//*[@id="mw-content-text"]/div[1]/div[1]/ul/li')))
         
-        todos_filmes = []
-        
-        for filme in lista_dez_filmes:
-            nome_filme, data_filme = filme.text.split(' (')
-            todos_filmes.append({"Nome filme": nome_filme, "Data filme": data_filme.rstrip(')')})
-        
-        for filme in lista_outros_filmes:
-            nome_filme, data_filme = filme.text.split(' (')
-            todos_filmes.append({"Nome filme": nome_filme, "Data filme": data_filme.rstrip(')')})
+        todos_filmes = loopMovies(lista_dez_filmes) + loopMovies(lista_outros_filmes)
         
         total = len(todos_filmes)
         todos_filmes.append({"Nome filme": 'Total de filmes', "Data filme": total})
@@ -43,5 +35,11 @@ def get_filmes():
     except:
         print("Ocorreu um erro")
 
-get_filmes()
+def loopMovies(movies):
+    filmes_processados = []
+    for filme in movies:
+        nome_filme, data_filme = filme.text.split(' (')
+        filmes_processados.append({"Nome filme": nome_filme, "Data filme": data_filme.rstrip(')')})
+    return filmes_processados
 
+get_filmes()
